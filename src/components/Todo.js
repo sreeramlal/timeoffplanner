@@ -17,7 +17,7 @@ const Todo = () => {
 
     const fetchTodos = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/getTodoList');
+            const response = await axios.get('https://backendtimeoff.onrender.com/getTodoList');
             setTodos(response.data);
         } catch (error) {
             console.error('Error fetching todos:', error);
@@ -54,7 +54,7 @@ const Todo = () => {
 
     const addTodo = async () => {
         try {
-            const response = await axios.post('http://localhost:3001/addTodoList', newTodo);
+            const response = await axios.post('https://backendtimeoff.onrender.com/addTodoList', newTodo);
             setTodos([...todos, response.data]);
             setNewTodo({ task: '', deadlines: [] });
         } catch (error) {
@@ -64,7 +64,7 @@ const Todo = () => {
 
     const updateTodo = async (id) => {
         try {
-            const response = await axios.put(`http://localhost:3001/updateTodoList/${id}`, editTodo);
+            const response = await axios.put(`https://backendtimeoff.onrender.com/updateTodoList/${id}`, editTodo);
             setTodos(todos.map(todo => (todo._id === id ? response.data : todo)));
             setEditMode(null);
         } catch (error) {
@@ -74,7 +74,7 @@ const Todo = () => {
 
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/deleteTodoList/${id}`);
+            await axios.delete(`https://backendtimeoff.onrender.com/deleteTodoList/${id}`);
             setTodos(todos.filter(todo => todo._id !== id));
         } catch (error) {
             console.error('Error deleting todo:', error);
