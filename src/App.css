@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(201, 233, 238) 0%, rgb(238, 248, 255) 100%);
+}
+.scrollable-list {
+  max-height: 100px; /* Adjust the height as needed */
+  overflow-y: auto;
+  list-style-type: disc; /* Ensures bullet points are shown */
+  padding-left: 20px; /* Adjust the padding as needed for better appearance */
+  margin: 0;
+}
+
+.scrollable-list-1 {
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
+  list-style-type: disc; /* Ensures bullet points are shown */
+  padding-left: 20px; /* Adjust the padding as needed for better appearance */
+  margin: 0;
+}
+
+
+.container {
+  padding-top: 50px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+.date-picker {
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table tbody tr {
+  transition: all 0.3s ease-in-out;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn-warning {
+  color: #fff;
+}
+
+.btn-danger {
+  color: #fff;
+}
